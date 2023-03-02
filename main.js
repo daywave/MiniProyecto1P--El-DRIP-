@@ -187,7 +187,8 @@ function drop(e){
 
                 alert("Felicidades")
                 console.log("Intento exitoso")
-                puntaje++;
+                puntaje += 100;
+                console.log(puntaje);
  }//FIN DEL IF CONDICIONALES
  else{
     console.log("LO HICISTE MAL PENDEJO");
