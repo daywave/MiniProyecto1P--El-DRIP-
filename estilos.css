@@ -1,0 +1,43 @@
+.nombreAnimal{
+    background-color: blue;
+    padding: 20px;
+    border: 2px solid black;
+    width: 60px;
+}
+
+.cajaAnimal{
+    border: 2px solid black;
+    width: 110px;
+    margin-top: 10px;
+}
+
+
+#conoceFijo {
+    position: absolute;
+    left: 130px;
+    top: 50px;
+}
+
+#cajatxt{
+    border: 2px solid black;
+    width: 110px;
+}
+
+.textoAnimal{
+    border: 2px solid black;
+    width: 110px;
+    margin-top: 10px;
+
+}
+
+#chido{
+    position: absolute;
+    left: 1100px;
+    top: 20px;
+}
+
+#arrastrables{
+    position: absolute;
+    left: 1100px;
+    top: 20px;
+}
