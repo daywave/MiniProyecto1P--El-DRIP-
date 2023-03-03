@@ -1,8 +1,12 @@
+body{
+    background-image: url(../images/imagen1.jpeg);
+    background-size: 100%;
+}
 .nombreAnimal{
     background-color: blue;
     padding: 20px;
     border: 2px solid black;
-    width: 60px;
+    width: 110px;
 }
 
 .cajaAnimal{
@@ -47,3 +51,49 @@
     font-family: 'Climate Crisis', cursive;
     font-size: 4em;
 }
+
+
+.name{
+    background: linear-gradient(45deg, rgb(32, 114, 214) 0%, rgb(78, 140, 213) 100%);
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    height: 2em;
+    padding-left: 10px;
+
+    
+}
+
+.icono{
+    width: 2vw;
+	height: 7vh;
+}
+
+/*****************************************/
+
+button{
+	border: transparent;
+	background: transparent;
+    width: 2vw;
+	height: 7vh;
+}
+
+.Musi-Off{
+	width: 2vw;
+	height: 7vh;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	top: 10vh;	
+}
+
+.Musi-On{
+	width: 2vw;
+	height: 7vh;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	top: 40vh;	
+}
+
