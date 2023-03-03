@@ -88,10 +88,6 @@ function colocarAnimales(animales) {
         console.log('<p>' + animales[i] + '</p>');
         pleftC += 200;
     }
-
-
-    //ACOMODAR NOMBRE BONITO
-    document.getElementById("cajas").appendChild(arrastrables);
 }
 
 const cargarSonido = function (fuente) {
@@ -240,6 +236,12 @@ function drop(e) {
             sonido.play();
         }
         
+        //acomodo divs
+        const node = document.getElementById("cajas");
+        const texto = document.getElementById("arrastrables");
+
+        node.appendChild(texto);
+        document.getElementById("cajas").appendChild(node);
 
 
         alert("Felicidades")
