@@ -212,3 +212,16 @@ function Puntaje() {
     localStorage.setItem("puntos", puntaje);
     localStorage.getItem("puntos");
 }
+
+
+//variables para local storage
+
+var jugador = localStorage.getItem()
+
+//Almacenar datos en local storage y guardarlos en un vector
+function Agregar()
+{
+    var jugador = JSON.stringify({
+        Nombre
+    });
+}

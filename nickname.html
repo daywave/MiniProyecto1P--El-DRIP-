@@ -18,16 +18,25 @@
 
     <h1 class="title2">¡Hola!, antes de comenzar, ¿Cuál es tu nombre?</h1>
     <canvas id="canvas" style="width:100%; background-image: url(images/fondo2.avif);"></canvas>
-    <form class="form">
-		<input type="text" required>
+
+    <!-- 
+    <input type="text" >
 		<label class="lbl-nombre">
-			<span class="text-nomb">Nombre</span>
-		</label>
-	</form>
+    <input type="text" style="position:absolute;left:100px;top:300px;width:600px;" />
+    </label>
+    -->
+    <form class="form">
+      <input type="text" required>
+      <label class="lbl-nombre">
+        <span class="text-nomb">Nombre</span>
+      </label>
+    </form>
+
 
     <div class="wrap">
         <a href="index.html" class="button-exit">Salir</a>
-        <a href="index.html" class="button">Listo</a>
+        <button onclick="Agregar()" class="button">Listo</button>
+        <a href="juego.html">EMPEZAR EL MAMALON MODO DIABLO</a>
     </div>
 
     <script> 
