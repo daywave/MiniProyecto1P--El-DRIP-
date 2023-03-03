@@ -83,6 +83,10 @@ function colocarAnimales(animales) {
         console.log('<p>' + animales[i] + '</p>');
         pleftC += 200;
     }
+
+
+    //ACOMODAR NOMBRE BONITO
+    document.getElementById("cajas").appendChild(cajas);
 }
 
 
@@ -205,5 +209,6 @@ function drop(e) {
 function Puntaje() {
     puntosActuales = document.getElementById("puntos");
     puntosActuales.innerHTML = "Puntaje actual: " + puntaje;
-
+    localStorage.setItem("puntos", puntaje);
+    localStorage.getItem("puntos");
 }
