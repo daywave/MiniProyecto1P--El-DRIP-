@@ -24,6 +24,8 @@ function Agregar() {
     jugadores.push(jugador);
     localStorage.setItem("jugadores", JSON.stringify(jugadores));
 
+    document.getElementById("idNombre").value="";
+
     console.log(jugadores);
     
   }
