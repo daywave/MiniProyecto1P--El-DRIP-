@@ -111,13 +111,37 @@ body {
     background: linear-gradient(90deg, red, rgb(209, 79, 79) 100%);
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    box-shadow: 12px 12px 24px rgba(255, 0, 0, 0.595);
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
     position: relative;
     padding: 10px;
     }
+
+    .button-go {
+      text-decoration: none;
+      text-align: center;
+      min-width: 300px;
+      margin-right: 40px;
+      min-height: 60px;
+      font-family: 'Amatic SC', cursive;
+      font-size: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-weight: 700;
+      color: #000000;
+      background: #57cb51;
+      background: linear-gradient(90deg, yellowgreen, rgb(6, 171, 0) 100%);
+      border: none;
+      border-radius: 1000px;
+      box-shadow: 12px 12px 24px green;
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 10px;
+      }
 
 a::before {
 content: '';
