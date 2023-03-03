@@ -160,12 +160,13 @@ function drop(e) {
         e.target.appendChild(document.getElementById(elementoArrastrado));
         e.target.style.border = '';  // Quita el borde
 
-        document.getElementById(elementoArrastrado).style.position = "absolute";
+        //Codigo comentado desde aqui
+        /*document.getElementById(elementoArrastrado).style.position = "absolute";
 
         /*Inicia ... programacion utilizando la libreria jquery para obtener las coordenadas exactas
         del cursor y realizar en esa posicion el soltado*/
 
-        tamContX = $('#' + e.target.id).width();
+        /*tamContX = $('#' + e.target.id).width();
         tamContY = $('#' + e.target.id).height();
 
 
@@ -179,9 +180,10 @@ function drop(e) {
 
         posXCont = $('#' + e.target.id).position().left;
         posYCont = $('#' + e.target.id).position().top;
+        */
 
         // Posicion absoluta del raton
-        x = e.layerX;
+       /* x = e.layerX;
         y = e.layerY;
 
         // Si parte del elemento que se quiere mover se queda fuera se cambia las coordenadas para que no sea asi
@@ -195,10 +197,12 @@ function drop(e) {
 
         document.getElementById(elementoArrastrado).style.left = x + "px";
         document.getElementById(elementoArrastrado).style.top = y + "px";
-
+*/
         /*Termina en la linea de arriba ... programacion utilizando la libreria jquery para obtener las coordenadas exactas
           del cursor y realizar en esa posicion el soltado*/
-        document.getElementById(elementoArrastrado).style.position = "absolute";
+        //document.getElementById(elementoArrastrado).style.position = "absolute";
+
+//HASTA AQUI
 
         var sonido = cargarSonido("../sounds/ballena.mp3");
 
@@ -206,6 +210,8 @@ function drop(e) {
         if((e.target.id=="c-ballena") && (elementoArrastrado == 'ballena')){
             let div = document.getElementById("c-ballena");
             div.innerHTML = `<p>ballena</p>`;
+            div.style.width = 20+"px";
+            div.style.height = 30+"px";
             console.log("REPRODUCE");
             sonido = cargarSonido("../sounds/ballena.mp3");
             sonido.play();
