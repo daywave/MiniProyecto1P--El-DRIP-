@@ -94,6 +94,16 @@ function colocarAnimales(animales) {
     document.getElementById("cajas").appendChild(cajas);
 }
 
+const cargarSonido = function (fuente) {
+    const sonido = document.createElement("audio");
+    sonido.src = fuente;
+    sonido.setAttribute("preload", "auto");
+    sonido.setAttribute("controls", "none");
+    sonido.style.display = "none"; // <-- oculto
+    document.body.appendChild(sonido);
+    return sonido;
+};
+
 
 function start(e) {
     console.log("inicia arrastre");
@@ -194,6 +204,41 @@ function drop(e) {
           del cursor y realizar en esa posicion el soltado*/
         document.getElementById(elementoArrastrado).style.position = "absolute";
 
+
+        //"ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"
+        if((e.target.id=="c-ballena") && (elementoArrastrado == 'ballena')){
+            console.log("REPRODUCE");
+            const sonido = cargarSonido("sounds/ballena.mp3");
+            sonido.play();
+        }
+        if((e.target.id=="c-cangrejo") && (elementoArrastrado == 'cangrejo')){
+            console.log("REPRODUCE");
+            const sonido = cargarSonido("sounds/cangrejo.mp3");
+            sonido.play();
+        }
+        if((e.target.id=="c-delfin") && (elementoArrastrado == 'delfin')){
+            console.log("REPRODUCE");
+            const sonido = cargarSonido("sounds/delfin.mp3");
+            sonido.play();
+        }
+        if((e.target.id=="c-orca") && (elementoArrastrado == 'orca')){
+            console.log("REPRODUCE");
+            const sonido = cargarSonido("sounds/orca.mp3");
+            sonido.play();
+        }
+        if((e.target.id=="c-pez") && (elementoArrastrado == 'pez')){
+            console.log("REPRODUCE");
+            const sonido = cargarSonido("sounds/pez.mp3");
+            sonido.play();
+        }
+        if((e.target.id=="c-tortuga") && (elementoArrastrado == 'tortuga')){
+            console.log("REPRODUCE");
+            const sonido = cargarSonido("sounds/tortuga.mp3");
+            sonido.play();
+        }
+        
+
+
         alert("Felicidades")
         console.log("Intento exitoso")
         puntaje += 100;
@@ -201,6 +246,8 @@ function drop(e) {
         Puntaje();
     }//FIN DEL IF CONDICIONALES
     else {
+        const sonido = cargarSonido("sounds/error.mp3");
+        sonido.play();
         console.log("LO HICISTE MAL PENDEJO");
         puntaje -= 50;
         console.log(puntaje);
