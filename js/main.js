@@ -266,7 +266,6 @@ function Puntaje() {
     puntosActuales = document.getElementById("puntos");
     puntosActuales.innerHTML = "Puntaje actual: " + puntaje;
 
-
     localStorage.setItem("puntos", puntaje);
     localStorage.getItem("puntos");
 
