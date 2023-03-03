@@ -207,10 +207,13 @@ a:hover::after, a:focus::after {
 
 /* */
 .form{
+  text-align: center;
+  padding: 40px;
+  margin-top: 5%;
   width: 600px;
   height: 110px;
   overflow: hidden;
-  margin-left: 0%;
+  margin-left: -20px;
   font-size: 50px;
   position: absolute; top:400px; left:630px;
 }
