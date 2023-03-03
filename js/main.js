@@ -237,12 +237,15 @@ function drop(e) {
         }
         
         //acomodo divs
-        const node = document.getElementById("cajas");
-        const texto = document.getElementById("arrastrables");
+        function show(arrastrables)
+        {
+            document.getElementById("cajas").innerHTML = document.getElementById("arrastrables").innerHTML;
+        }
 
-        node.appendChild(texto);
-        document.getElementById("cajas").appendChild(node);
-
+        /*
+        function show(param_div_id) {
+    document.getElementById('main_place').innerHTML = document.getElementById(param_div_id).innerHTML;
+  }*/
 
         alert("Felicidades")
         console.log("Intento exitoso")
