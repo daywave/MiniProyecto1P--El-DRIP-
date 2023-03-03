@@ -6,12 +6,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/estilos.css">
+        <link rel="stylesheet" href="styles/creditos.css">
         <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <title> - GRANJA "LOS COCHIS" - </title>
 
-    </head>
+         <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+      rel="stylesheet"/>
 
+    </head>
     <body onload="Carga()">
         <p>
             <span id="minutos"></span>:<span id="segundos"></span>
@@ -22,18 +29,12 @@
         <section>
             <!--Contenedor de las imagenes-->
             <div id="imagenes"">
-
             </div>
-
-
             <!--Elementos que se van a arrastrar-->
             <div id="arrastrables"">
-
             </div>
-
             <!--Lugar donde se van a arrastrar-->
             <div id="cajas">
-
             </div>
             <a href="index.html">Volver a pantalla inicio
             </a>
@@ -41,15 +42,23 @@
         <script src="js/contador.js"></script>
         <script src="js/main.js"></script>
         <script src="js/Agregar.js"></script>
-
     </audio>
+
+    <form class="wrap" action="">
+
+    <a href="index.html" class="button-exit">Salir</a>
+  </form>
 
     <button name="button" onclick="Sonido()">
         <img class="Musi-Off" src="images/No_Music.svg">
   <audio id="Audio-2">
   </audio>
 </button>
+<div class="waves">
+    <div class="wave circulo a"></div>
+    <div class="wave circulo b"></div>
+    <div class="wave circulo c"></div>
+  </div>
 <script src="js/sonido.js"></script>
     </body>
-
 </html>
