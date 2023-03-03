@@ -1,6 +1,7 @@
-const CARDS = 6;
+//const CARDS = 6;
 
-var animales = ["borrego", "caballo", "cerdo", "perro", "pollo", "vaca"];
+var animales = ["ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"];
+var animalesCopia = ["ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"];
 let puntaje = 0;
 
 window.onload = colocarAnimales(animales);
@@ -29,6 +30,10 @@ function mezclarArreglo(array) {
 
 function colocarAnimales(animales) {
     mezclarArreglo(animales);
+    console.log("ANIMALES:" +animales);
+    mezclarArreglo(animalesCopia);
+    console.log("ANIMALES:" +animalesCopia);
+
 
     var imagenes = document.getElementById("imagenes");
     var arrastrables = document.getElementById("arrastrables");
@@ -48,19 +53,19 @@ function colocarAnimales(animales) {
         //Imprime imagenes
         imagenes.innerHTML += `
             <div style="position: absolute; left: ${pleft}px; top: ${ptop}px;">
-                <img src="media/${animales[i]}.png" style="width: 100px;" alt="">
+                <img src="images/${animales[i]}.png" style="width: 100px;" alt="">
             </div>
         `;
         pleft += 200;
+        console.log("imagen: " + animales[i]+".png");
     }
-
 
     //Etiquetas con nombres de animales que se arrastran
     arrastrables.innerHTML = '';
     for (let i = 0; i < 6; i++) {
         console.log('Animal:' + animales[i]);
         arrastrables.innerHTML += `
-        <div class="textoAnimal" id="${animales[i]}" draggable="true" ondragstart="start(event)" ondragend="end(event)">${animales[i]}</div>
+        <div class="textoAnimal" id="${animalesCopia[i]}" draggable="true" ondragstart="start(event)" ondragend="end(event)">${animalesCopia[i]}</div>
         `;
         console.log('<div class="animal"><img class="image" src="' + animales[i] + '.png" alt=""></div>');
     }
@@ -121,7 +126,7 @@ function over(e) {
     var id = e.target.id; // Elemento sobre el que se arrastra
 
     // return false para que se pueda soltar
-    if (id == 'c-pollo' || id == 'c-borrego' || id == 'c-cerdo' || id == 'c-perro' || id == 'c-caballo' || id == 'c-vaca') {
+    if (id == 'c-ballena' || id == 'c-cangrejo' || id == 'c-delfin' || id == 'c-orca' || id == 'c-pez' || id == 'c-tortuga') {
         return false; // Cualquier elemento se puede soltar sobre el div destino 1
     }
 
@@ -143,7 +148,7 @@ function drop(e) {
     console.log("TARGETID: " + e.target.id);
     console.log("ELEMENTOARRASTRADO: " + elementoArrastrado);
 
-    if (((e.target.id == "c-borrego") && (elementoArrastrado == 'borrego') || ((e.target.id == "c-caballo") && (elementoArrastrado == 'caballo')) || ((e.target.id == "c-cerdo") && (elementoArrastrado == 'cerdo')) || ((e.target.id == "c-perro") && (elementoArrastrado == 'perro')) || ((e.target.id == "c-pollo") && (elementoArrastrado == 'pollo')) || ((e.target.id == "c-vaca") && (elementoArrastrado == 'vaca')))) {
+    if (((e.target.id == "c-ballena") && (elementoArrastrado == 'ballena') || ((e.target.id == "c-cangrejo") && (elementoArrastrado == 'cangrejo')) || ((e.target.id == "c-delfin") && (elementoArrastrado == 'delfin')) || ((e.target.id == "c-orca") && (elementoArrastrado == 'orca')) || ((e.target.id == "c-pez") && (elementoArrastrado == 'pez')) || ((e.target.id == "c-tortuga") && (elementoArrastrado == 'tortuga')))) {
         console.log("elemento soltado");
 
         console.log("ENTRA");
