@@ -48,7 +48,7 @@ function colocarAnimales(animales) {
         //Imprime imagenes
         imagenes.innerHTML += `
             <div style="position: absolute; left: ${pleft}px; top: ${ptop}px;">
-                <img src="media/${animales[i]}.png" style="width: 100px;" alt="">
+                <img src="images/${animales[i]}.png" style="width: 100px;" alt="">
             </div>
         `;
         pleft += 200;
