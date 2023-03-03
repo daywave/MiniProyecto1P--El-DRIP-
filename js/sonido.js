@@ -14,7 +14,8 @@ function Sonido(){
 		MiAudio.volume = 0.075;
 		MiAudio.play();	
 	}else{
-        MiAudio.stop();
+		MiAudio.stop();
+
     }
 
 }
