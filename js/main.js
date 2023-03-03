@@ -1,6 +1,7 @@
 //const CARDS = 6;
 
 var animales = ["ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"];
+var animalesCopia = ["ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"];
 let puntaje = 0;
 
 window.onload = colocarAnimales(animales);
@@ -61,7 +62,7 @@ function colocarAnimales(animales) {
     for (let i = 0; i < 6; i++) {
         console.log('Animal:' + animales[i]);
         arrastrables.innerHTML += `
-        <div class="textoAnimal" id="${animales[i]}" draggable="true" ondragstart="start(event)" ondragend="end(event)">${animales[i]}</div>
+        <div class="textoAnimal" id="${animalesCopia[i]}" draggable="true" ondragstart="start(event)" ondragend="end(event)">${animales[i]}</div>
         `;
         console.log('<div class="animal"><img class="image" src="' + animales[i] + '.png" alt=""></div>');
     }
