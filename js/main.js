@@ -65,7 +65,7 @@ function colocarAnimales(animales) {
     for (let i = 0; i < 6; i++) {
         console.log('Animal:' + animales[i]);
         arrastrables.innerHTML += `
-        <div class="textoAnimal" id="${animalesCopia[i]}" draggable="true" ondragstart="start(event)" ondragend="end(event)">${animales[i]}</div>
+        <div class="textoAnimal" id="${animalesCopia[i]}" draggable="true" ondragstart="start(event)" ondragend="end(event)">${animalesCopia[i]}</div>
         `;
         console.log('<div class="animal"><img class="image" src="' + animales[i] + '.png" alt=""></div>');
     }
