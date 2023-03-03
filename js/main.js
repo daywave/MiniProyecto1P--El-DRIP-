@@ -91,7 +91,7 @@ function colocarAnimales(animales) {
 
 
     //ACOMODAR NOMBRE BONITO
-    document.getElementById("cajas").appendChild(cajas);
+    document.getElementById("cajas").appendChild(arrastrables);
 }
 
 const cargarSonido = function (fuente) {
@@ -161,6 +161,8 @@ function drop(e) {
     if (((e.target.id == "c-ballena") && (elementoArrastrado == 'ballena') || ((e.target.id == "c-cangrejo") && (elementoArrastrado == 'cangrejo')) || ((e.target.id == "c-delfin") && (elementoArrastrado == 'delfin')) || ((e.target.id == "c-orca") && (elementoArrastrado == 'orca')) || ((e.target.id == "c-pez") && (elementoArrastrado == 'pez')) || ((e.target.id == "c-tortuga") && (elementoArrastrado == 'tortuga')))) {
         console.log("elemento soltado");
 
+        
+
         console.log("ENTRA");
 
         e.target.appendChild(document.getElementById(elementoArrastrado));
@@ -204,36 +206,37 @@ function drop(e) {
           del cursor y realizar en esa posicion el soltado*/
         document.getElementById(elementoArrastrado).style.position = "absolute";
 
-        var sonido = cargarSonido("sounds/ballena.mp3");
+        var sonido = cargarSonido("../sounds/ballena.mp3");
+
         //"ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"
         if((e.target.id=="c-ballena") && (elementoArrastrado == 'ballena')){
             console.log("REPRODUCE");
-            sonido = cargarSonido("sounds/ballena.mp3");
+            sonido = cargarSonido("../sounds/ballena.mp3");
             sonido.play();
         }
         if((e.target.id=="c-cangrejo") && (elementoArrastrado == 'cangrejo')){
             console.log("REPRODUCE");
-            sonido = cargarSonido("sounds/cangrejo.mp3");
+            sonido = cargarSonido("../sounds/cangrejo.mp3");
             sonido.play();
         }
         if((e.target.id=="c-delfin") && (elementoArrastrado == 'delfin')){
             console.log("REPRODUCE");
-            sonido = cargarSonido("sounds/delfin.mp3");
+            sonido = cargarSonido("../sounds/delfin.mp3");
             sonido.play();
         }
         if((e.target.id=="c-orca") && (elementoArrastrado == 'orca')){
             console.log("REPRODUCE");
-            sonido = cargarSonido("sounds/orca.mp3");
+            sonido = cargarSonido("../sounds/orca.mp3");
             sonido.play();
         }
         if((e.target.id=="c-pez") && (elementoArrastrado == 'pez')){
-            console.log("REPRODUCE");
-            sonido = cargarSonido("sounds/pez.mp3");
-            sonido.play();
+             
+            const PezAudio = new Audio("../sounds/pez.mp3");
+            PezAudio.play();
         }
         if((e.target.id=="c-tortuga") && (elementoArrastrado == 'tortuga')){
             console.log("REPRODUCE");
-            sonido = cargarSonido("sounds/tortuga.mp3");
+            sonido = cargarSonido("../sounds/tortuga.mp3");
             sonido.play();
         }
         
@@ -261,25 +264,10 @@ function drop(e) {
 function Puntaje() {
     puntosActuales = document.getElementById("puntos");
     puntosActuales.innerHTML = "Puntaje actual: " + puntaje;
+
+
     localStorage.setItem("puntos", puntaje);
     localStorage.getItem("puntos");
-}
 
 
-//VARIABLES PARA LOS NOMBRES
-var jugadores = localStorage.getItem("jugadores");
-jugadores = JSON.parse(jugadores);
-jugadores = [];
-
-//Almacenar datos en local storage y guardarlos en un vector
-function Agregar() {
-  var nombre = document.getElementById("idNombre").value;
-  var jugador = JSON.stringify({
-    Nombre: nombre
-  });
-
-  jugadores.push(jugador);
-  localStorage.setItem("jugadores", JSON.stringify(jugadores));
-
-  console.log(jugadores);
 }

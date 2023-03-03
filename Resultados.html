@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados recientes</title>
+
+    <title>Resultados Recientes</title>
+
+    <link rel="stylesheet" href="styles/Resultados.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <script async defer src="js/Resultados.js"></script>
+    <script async defer src="js/Agregar.js"></script>
+
 </head>
 <body>
 
-<div id="TablaR"></div>
+    <br><br>
+
+    <h2> AQUI SE MUESTRAN LOS RESULTADOS RECIENTES DE JUEGO: </h2>
+
+    <br><br><br>
+
+    <center>
+
+    <table id="TablaR"></table>
+
+    <br><br>
+
+    <a class="button" href="index.html">Volver</a>
+    
+    </center>
     
 </body>
-    <script>
-                
-        document.getElementById("TablaR").innerHTML="";
-                
-        var tabla="<tr><th>Titulo</th><th>Autor</th><th>Editorial</th><th>Anio</th><th>Borrar</th><th>Editar</th></tr>";
-                
-        for(var i in libros){
-            var libro = JSON.parse(libros[i]);
-                    
-            tabla += "<tr><td>"+libro.titulo+"</td>";
-            tabla += "<td>"+libro.autor+"</td>";
-            tabla += "<td>"+libro.editorial+"</td>";
-            tabla += "<td>"+libro.anio+"</td>";
-            tabla += "<td><input type='button' value='Eliminar Libro' onClick='borrar("+i+")'></td>";
-            tabla += "<td><input type='button' value='Editar Libro' onClick='editar("+i+")'></td>";
-            tabla += "</tr>";
-        }
-                
-        document.getElementById("listado").innerHTML = tabla;
-        
-    </script>
+    
 </html>

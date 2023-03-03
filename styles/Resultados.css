@@ -1,0 +1,32 @@
+*{
+    background-color: black;
+}
+
+#TablaR {
+    width: 75%;
+}
+
+#TablaR,
+tr,
+th,
+td {
+
+    color: white;
+    font-style: oblique;
+    border: 1px solid white;
+    border-collapse: separate;
+    font-family: 'Raleway', sans-serif;
+}
+
+th{
+
+    color: red;
+}
+
+h2, h4{
+
+    color: white;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}

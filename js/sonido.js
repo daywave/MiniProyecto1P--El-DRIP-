@@ -11,7 +11,7 @@ function Sonido(){
 	if(sound){
 		document.querySelector(".Musi-Off").src="../images/Si_Music.svg";
 		MiAudio.src="../sounds/fondo.wav";	
-		MiAudio.volume = 0.7;
+		MiAudio.volume = 0.075;
 		MiAudio.play();	
 	}else{
         MiAudio.stop();
