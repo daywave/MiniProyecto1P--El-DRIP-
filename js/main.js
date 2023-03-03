@@ -30,6 +30,10 @@ function mezclarArreglo(array) {
 
 function colocarAnimales(animales) {
     mezclarArreglo(animales);
+    console.log("ANIMALES:" +animales);
+    mezclarArreglo(animalesCopia);
+    console.log("ANIMALES:" +animalesCopia);
+
 
     var imagenes = document.getElementById("imagenes");
     var arrastrables = document.getElementById("arrastrables");
@@ -57,7 +61,6 @@ function colocarAnimales(animales) {
     }
 
     //Etiquetas con nombres de animales que se arrastran
-    mezclarArreglo(animalesCopia);
     arrastrables.innerHTML = '';
     for (let i = 0; i < 6; i++) {
         console.log('Animal:' + animales[i]);
