@@ -72,7 +72,7 @@ body{
 
 /*****************************************/
 
-button{
+.button-s{
 	border: transparent;
 	background: transparent;
     width: 2vw;
