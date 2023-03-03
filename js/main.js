@@ -91,7 +91,7 @@ function colocarAnimales(animales) {
 
 
     //ACOMODAR NOMBRE BONITO
-    document.getElementById("cajas").appendChild(cajas);
+    document.getElementById("cajas").appendChild(arrastrables);
 }
 
 const cargarSonido = function (fuente) {
