@@ -17,6 +17,9 @@ for(var i in jugadores){
     
     tabla += "</tr>";
 
+    const audio = new Audio("../sounds/pez.mp3");
+    audio.play();
+
 }
 
 document.getElementById("TablaR").innerHTML = tabla;
