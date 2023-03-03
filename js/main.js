@@ -56,8 +56,8 @@ function colocarAnimales(animales) {
         console.log("imagen: " + animales[i]+".png");
     }
 
-
     //Etiquetas con nombres de animales que se arrastran
+    mezclarArreglo(animalesCopia);
     arrastrables.innerHTML = '';
     for (let i = 0; i < 6; i++) {
         console.log('Animal:' + animales[i]);
