@@ -212,7 +212,7 @@ a:hover::after, a:focus::after {
   overflow: hidden;
   margin-left: 0%;
   font-size: 50px;
-  position: absolute; top:400px; left:630px;
+  position: absolute; top:800px; left:630px;
 }
 .form input{
   width: 100%;
