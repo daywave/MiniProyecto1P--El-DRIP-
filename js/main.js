@@ -117,6 +117,7 @@ function end(e) {
 
 function enter(e) {
     console.log("entrar a area de soldato");
+    //Modifica borde de boton
     e.target.style.border = '3px dotted #555';
 }
 
@@ -155,14 +156,11 @@ function drop(e) {
     console.log("ELEMENTOARRASTRADO: " + elementoArrastrado);
 
     if (((e.target.id == "c-ballena") && (elementoArrastrado == 'ballena') || ((e.target.id == "c-cangrejo") && (elementoArrastrado == 'cangrejo')) || ((e.target.id == "c-delfin") && (elementoArrastrado == 'delfin')) || ((e.target.id == "c-orca") && (elementoArrastrado == 'orca')) || ((e.target.id == "c-pez") && (elementoArrastrado == 'pez')) || ((e.target.id == "c-tortuga") && (elementoArrastrado == 'tortuga')))) {
-        console.log("elemento soltado");
-
-        
-
-        console.log("ENTRA");
 
         e.target.appendChild(document.getElementById(elementoArrastrado));
         e.target.style.border = '';  // Quita el borde
+
+        document.getElementById(elementoArrastrado).style.position = "absolute";
 
         /*Inicia ... programacion utilizando la libreria jquery para obtener las coordenadas exactas
         del cursor y realizar en esa posicion el soltado*/
@@ -206,6 +204,8 @@ function drop(e) {
 
         //"ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"
         if((e.target.id=="c-ballena") && (elementoArrastrado == 'ballena')){
+            let div = document.getElementById("c-ballena");
+            div.innerHTML = `<p>ballena</p>`;
             console.log("REPRODUCE");
             sonido = cargarSonido("../sounds/ballena.mp3");
             sonido.play();
@@ -226,7 +226,6 @@ function drop(e) {
             sonido.play();
         }
         if((e.target.id=="c-pez") && (elementoArrastrado == 'pez')){
-             
             const PezAudio = new Audio("../sounds/pez.mp3");
             PezAudio.play();
         }
@@ -235,17 +234,8 @@ function drop(e) {
             sonido = cargarSonido("../sounds/tortuga.mp3");
             sonido.play();
         }
-        
-        //acomodo divs
-        function show(arrastrables)
-        {
-            document.getElementById("cajas").innerHTML = document.getElementById("arrastrables").innerHTML;
-        }
 
-        /*
-        function show(param_div_id) {
-    document.getElementById('main_place').innerHTML = document.getElementById(param_div_id).innerHTML;
-  }*/
+
 
         alert("Felicidades")
         console.log("Intento exitoso")
