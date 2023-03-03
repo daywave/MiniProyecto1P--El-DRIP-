@@ -4,7 +4,6 @@ jugadores = JSON.parse(jugadores);
 document.getElementById("TablaR").innerHTML = "";
                 
 var tabla="<tr><th>NickName</th><th>Puntaje</th><th>Tiempo</th></tr><br>";
-
 for(var i in jugadores){
 
     var jugador = JSON.parse(jugadores[i]);
@@ -21,6 +20,5 @@ for(var i in jugadores){
     audio.play();
 
 }
-
 document.getElementById("TablaR").innerHTML = tabla;
 
