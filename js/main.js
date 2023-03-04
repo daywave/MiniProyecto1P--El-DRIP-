@@ -79,7 +79,7 @@ function colocarAnimales(animales) {
         if (i % 2 == 0) {
             ptopC = 500;
         } else {
-            ptopC = 400;
+            ptopC = 300;
         }
         //Imprime caja
         cajas.innerHTML += `
@@ -161,12 +161,12 @@ function drop(e) {
         e.target.style.border = '';  // Quita el borde
 
         //Codigo comentado desde aqui
-        /*document.getElementById(elementoArrastrado).style.position = "absolute";
+        document.getElementById(elementoArrastrado).style.position = "absolute";
 
         /*Inicia ... programacion utilizando la libreria jquery para obtener las coordenadas exactas
         del cursor y realizar en esa posicion el soltado*/
 
-        /*tamContX = $('#' + e.target.id).width();
+        tamContX = $('#' + e.target.id).width();
         tamContY = $('#' + e.target.id).height();
 
 
@@ -180,10 +180,10 @@ function drop(e) {
 
         posXCont = $('#' + e.target.id).position().left;
         posYCont = $('#' + e.target.id).position().top;
-        */
+        
 
         // Posicion absoluta del raton
-       /* x = e.layerX;
+        x = e.layerX;
         y = e.layerY;
 
         // Si parte del elemento que se quiere mover se queda fuera se cambia las coordenadas para que no sea asi
@@ -197,7 +197,7 @@ function drop(e) {
 
         document.getElementById(elementoArrastrado).style.left = x + "px";
         document.getElementById(elementoArrastrado).style.top = y + "px";
-*/
+
         /*Termina en la linea de arriba ... programacion utilizando la libreria jquery para obtener las coordenadas exactas
           del cursor y realizar en esa posicion el soltado*/
         //document.getElementById(elementoArrastrado).style.position = "absolute";
@@ -208,34 +208,35 @@ function drop(e) {
 
         //"ballena", "cangrejo", "delfin", "orca", "pez", "tortuga"
         if((e.target.id=="c-ballena") && (elementoArrastrado == 'ballena')){
-            let div = document.getElementById("c-ballena");
-            div.innerHTML = `<p>ballena</p>`;
-            div.style.width = 20+"px";
-            div.style.height = 30+"px";
-            console.log("REPRODUCE");
+            document.getElementById("c-ballena").innerHTML = `<p style="font-size: 35px; border: 0">ballena</p>`;
             sonido = cargarSonido("../sounds/ballena.mp3");
             sonido.play();
         }
         if((e.target.id=="c-cangrejo") && (elementoArrastrado == 'cangrejo')){
+            document.getElementById("c-cangrejo").innerHTML = `<p style="font-size: 35px;">cangrejo</p>`;
             console.log("REPRODUCE");
             sonido = cargarSonido("../sounds/cangrejo.mp3");
             sonido.play();
         }
         if((e.target.id=="c-delfin") && (elementoArrastrado == 'delfin')){
+            document.getElementById("c-delfin").innerHTML = `<p style="font-size: 35px;">delfin</p>`;
             console.log("REPRODUCE");
             sonido = cargarSonido("../sounds/delfin.mp3");
             sonido.play();
         }
         if((e.target.id=="c-orca") && (elementoArrastrado == 'orca')){
+            document.getElementById("c-orca").innerHTML = `<p style="font-size: 35px;">orca</p>`;
             console.log("REPRODUCE");
             sonido = cargarSonido("../sounds/orca.mp3");
             sonido.play();
         }
         if((e.target.id=="c-pez") && (elementoArrastrado == 'pez')){
+            document.getElementById("c-pez").innerHTML = `<p style="font-size: 35px;">pez</p>`;
             const PezAudio = new Audio("../sounds/pez.mp3");
             PezAudio.play();
         }
         if((e.target.id=="c-tortuga") && (elementoArrastrado == 'tortuga')){
+            document.getElementById("c-tortuga").innerHTML = `<p style="font-size: 35px;">tortuga</p>`;
             console.log("REPRODUCE");
             sonido = cargarSonido("../sounds/tortuga.mp3");
             sonido.play();
