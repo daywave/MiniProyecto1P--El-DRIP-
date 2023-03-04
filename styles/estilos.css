@@ -1,6 +1,7 @@
 body{
     background-image: url(../images/imagen1.jpeg);
     background-size: 100%;
+    font-size: 50px;
 }
 .nombreAnimal{
     background-color: blue;
@@ -14,8 +15,6 @@ body{
     width: 110px;
     margin-top: 10px;
 }
-
-
 #conoceFijo {
     position: absolute;
     left: 130px;
@@ -69,9 +68,6 @@ body{
     width: 2vw;
 	height: 7vh;
 }
-
-/*****************************************/
-
 #player-container #play-pause {
     cursor: pointer;
     text-indent: -999999px;
@@ -86,6 +82,7 @@ body{
     background-position:center;
     background-size:50px;
     background-color: none;
+    position: absolute; top:20px; left:10px;
   }
   .play {
     background-image: url(../images/No_Music.svg);
@@ -93,4 +90,32 @@ body{
   .pause {
      background-image: url(../images/Si_Music.svg)!important;
   }
+
+  .wrap {
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    text-decoration: none;
+    text-align: center;
+    min-width: 100px;
+    margin-right: 40px;
+    min-height: 50px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #000000;
+    background: #2f6c66;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
 
