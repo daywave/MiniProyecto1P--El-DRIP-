@@ -1,22 +1,19 @@
-let sound = true;
+var track = document.getElementById('track');
 
-let MiAudio = document.getElementById("Audio-2");
+var controlBtn = document.getElementById('play-pause');
 
-function ChangeImgOn(){
-	document.querySelector(".Musi-Off").src="../images/No_Music.svg";
-}
-MiAudio.addEventListener('ended', ChangeImgOn);
-
-function Sonido(){
-	if(sound){
-		document.querySelector(".Musi-Off").src="../images/Si_Music.svg";
-		MiAudio.src="../sounds/fondo.wav";	
-		MiAudio.volume = 0.075;
-		MiAudio.play();	
-	}else{
-		MiAudio.stop();
-
+function playPause() {
+    if (track.paused) {
+        track.play();
+        //controlBtn.textContent = "Pause";
+        controlBtn.className = "pause";
+    } else { 
+        track.pause();
+         //controlBtn.textContent = "Play";
+        controlBtn.className = "play";
     }
-
 }
-
+controlBtn.addEventListener("click", playPause);
+track.addEventListener("ended", function() {
+  controlBtn.className = "play";
+});

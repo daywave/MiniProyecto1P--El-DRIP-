@@ -56,13 +56,17 @@
         <script src="js/main.js"></script>
         <script src="js/Agregar.js"></script>
 
-    </audio>
 
-    <button name="button" onclick="Sonido()">
-        <img class="Musi-Off" src="images/No_Music.svg">
-  <audio id="Audio-2">
+      <!-- musica pausable -->
+<audio id="track">
+    <source src="sounds/fondo.wav" type="audio/wav" />
   </audio>
-</button>
+  
+  <div id="player-container">
+    <div id="play-pause" class="play">Play</div>
+  </div>
+
 <script src="js/sonido.js"></script>
+
     </body>
 </html>
