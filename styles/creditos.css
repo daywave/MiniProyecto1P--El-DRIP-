@@ -4,7 +4,6 @@ body {
   text-align: center;
   font-size: 25px;
 }
-
 .container {
   height: 900px;
   width: 100%;
@@ -91,9 +90,6 @@ body {
     position: relative;
     padding: 10px;
     }
-
-
-
 .button-exit:hover, .button-exit:focus {
   transform: translateY(-6px);
 }
