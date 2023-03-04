@@ -1,8 +1,6 @@
+
 var jugadores = localStorage.getItem("jugadores");
 jugadores = JSON.parse(jugadores);
-
-
-
 document.getElementById("TablaR").innerHTML = "";
                 
 var tabla="<tr><th>NickName</th><th>Puntaje</th><th>Tiempo</th></tr><br>";
