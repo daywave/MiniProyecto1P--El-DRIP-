@@ -1,21 +1,31 @@
+function Agregar() {
 
-var jugadores = localStorage.getItem("jugadores");
-jugadores = JSON.parse(jugadores);
-document.getElementById("TablaR").innerHTML = "";
-                
-var tabla="<tr><th>NickName</th><th>Puntaje</th><th>Tiempo</th></tr><br>";
-for(var i in jugadores){
-
-    var jugador = JSON.parse(jugadores[i]);
-        
-    tabla += "<tr>";
-
-    tabla += "<td>"+ jugador.Nombre + "</td>";
-    tabla += "<td>"+ jugador.Puntaje +"</td>";
-    tabla += "<td>"+ jugador.Tiempo + "</td>";
+    if(jugadores == null){
+  
+      jugadores=[];
+  
+    } 
     
-    tabla += "</tr>";
-
-}
-document.getElementById("TablaR").innerHTML = tabla;
+    else {
+  
+      var nombre = document.getElementById("idNombre").value;
+      var puntaje = 0;
+      var tiempo = 0;
+  
+      var jugador = JSON.stringify({
+        Nombre: nombre,
+        Puntaje: puntaje,
+        Tiempo: tiempo
+      });
+  
+      jugadores.push(jugador);
+      localStorage.setItem("jugadores", JSON.stringify(jugadores));
+  
+      document.getElementById("idNombre").value="";
+  
+      console.log(jugadores);
+      
+    }
+  }
+  
 
