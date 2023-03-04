@@ -3,6 +3,11 @@ body {
   font-family: 'Amatic SC', cursive;
   text-align: center;
   font-size: 25px;
+  background: #0f9bf6;
+}
+
+.current-date{
+  font-size: 20px;
 }
 .container {
   height: 900px;
